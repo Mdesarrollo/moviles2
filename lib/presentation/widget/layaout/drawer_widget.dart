@@ -11,20 +11,18 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          DrawerHeader(child: Text("hola desde drawer")),
           
           ...routerList
               .where((e) => e.isVisible)
               .map(
                 (e) => ListTile(
                   title: Text(e.title),
-                  subtitle: Text(e.description),
                   onTap: () {
                     Navigator.pop(context);
-                    GoRouter.of(context).push("/");
-                    // context.go("/");
+                    context.go(e.patch); 
                   },
                   leading: Icon(e.icon),
+                  
                 ),
               ),
         ],
