@@ -24,12 +24,12 @@ class Usuario {
   factory Usuario.fromJson(Map<String, dynamic> json) {
     return Usuario(
       nombre: json["name"] ?? "",
-      segundoNombre: json["middleName"] ?? "",
-      apellido1: json["lastName"] ?? "",
-      apellido2: json["lastName2"] ?? "",
+      segundoNombre: json["middle_name"] ?? "",
+      apellido1: json["last_name"] ?? "",
+      apellido2: json["last_name2"] ?? "",
       email: json["email"] ?? "",
       password: json["password"] ?? "",
-      telefono: json["phoneNumber"] ?? "",
+      telefono: json["phone_number"] ?? "",
       documento: json["documento"] ?? "",
       sexo: json["sexo"] ?? "",
     );

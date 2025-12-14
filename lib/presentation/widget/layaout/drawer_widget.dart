@@ -11,7 +11,15 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          
+          SizedBox(height: 50),
+          Icon(Icons.person),
+          SizedBox(height: 20),
+          Text("192125-MAICOL EDUARDO ROBLES SALAZAR"),
+          Text("merobless@ufpso.edu.co"),
+          SizedBox(height: 20),
+          Text("192091-JESUS EMILIO OSORIO PEREZ"),
+          Text("jeosoriop@ufpso.edu.co"),
+          SizedBox(height: 20),
           ...routerList
               .where((e) => e.isVisible)
               .map(
@@ -19,10 +27,9 @@ class DrawerWidget extends StatelessWidget {
                   title: Text(e.title),
                   onTap: () {
                     Navigator.pop(context);
-                    context.go(e.patch); 
+                    context.go(e.patch);
                   },
                   leading: Icon(e.icon),
-                  
                 ),
               ),
         ],
